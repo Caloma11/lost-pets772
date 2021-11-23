@@ -1,0 +1,17 @@
+
+<div class="container p-5 mb-5">
+  <h1>List your missing pet:</h1>
+
+
+
+  <%= simple_form_for @pet do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :color %>
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :lost_at, html5: true %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+
